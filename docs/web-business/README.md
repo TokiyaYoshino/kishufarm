@@ -17,6 +17,7 @@ kishufarm の Web事業（HP制作〜AEOマーケ支援）の資料一式です�
 | 07 | [subsidy-customer-sheet](07-subsidy-customer-sheet.md) | 商談に出る人 | 顧客に渡す補助金の1枚 |
 | 08 | [contract-templates](08-contract-templates.md) | 契約を結ぶ人 | 見積書の書式と契約条項6本のドラフト |
 | 09 | [sales-channels](09-sales-channels.md) | 営業を担うメンバー | 営業チャネルの再設計。④の仮置きの訂正と、月2件の商談から逆算した設計 |
+| 10 | [positioning](10-positioning.md) | メンバー全員 | 事業の定義。店が払っているお金（飲食・美容）から「誰の、どんな課題を、どう解決するか」を組み立て直したもの。パッケージと月次指標はここから決まる |
 | — | [TODO](TODO.md) | 全員 | 残タスク。吉野さん待ち／決めること／実測待ち／作るもの／一次資料の確認 |
 
 > 残っているタスクは [TODO.md](TODO.md) に一覧があります。
