@@ -2,8 +2,5 @@
 # コミット対象のドラフトは funding/ 直下に置き、レンジ表記に留める
 funding/private/
 
-# Web/AEO事業の共通基盤（独立したリポジトリ。顧客の情報を含むため別管理）
-/web/
-
 # macOS
 .DS_Store
