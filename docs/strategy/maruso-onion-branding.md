@@ -3,7 +3,9 @@
 > **一行で**：農家の孫まっち型（人ブランド＋他農家の販売代行）を再現する。2026年11月に代行型の最小ループと発信を同時に始め、2027年春の新玉を看板商品にする。
 >
 > 事業区分：霧珠ファーム（自社事業）／目標：2028年10月までに個人年収1000万円
-> 最終更新：2026-10-29 ｜ 調査の根拠と出典 → [maruso-onion-research.md](./maruso-onion-research.md)
+> 最終更新：2026-10-29
+> 調査の根拠と出典 → [maruso-onion-research.md](./maruso-onion-research.md)
+> 11月の実務（投稿16本の台本・代行の営業キット）→ [maruso-november-kit.md](./maruso-november-kit.md)
 
 ---
 
