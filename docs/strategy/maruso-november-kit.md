@@ -183,6 +183,23 @@
 
 **CapCut の注意**：テンプレートやエフェクトを使うと書き出しにロゴ（透かし）が入るという指摘がある。**自分の素材＋テキストだけで作れば回避できる。** テンプレートは見た目が他の投稿と同じになるので、ブランド化の観点でも使わない。無料枠の条件は変わりやすいので作業前に公式で確認する。
 
+## Mac でのインストール先（2026-11-03）
+
+主軸は1本だけ。**CapCut Mac 版を入れて始める。** 2〜4は必要になってから。
+
+| # | ソフト | URL | 備考 |
+|---|---|---|---|
+| **1** | **CapCut Mac 版** | https://www.capcut.com/ja-jp/ ／ Mac用ページ https://www.capcut.com/ja-jp/resource/download-capcut-for-mac | 無料枠で自動字幕が使える。**テンプレート・エフェクトは使わない** |
+| 2 | DaVinci Resolve 無料版 | https://www.blackmagicdesign.com/jp/products/davinciresolve （「今すぐダウンロード」→ 無料版を選択、登録フォームあり） | 色を本気でやる場合のみ。**自動字幕は Studio 版のみ** |
+| 3 | Shotcut（予備・OSS） | https://shotcut.org/download/ | **Intel か Arm64（Apple Silicon）の .dmg を選ぶ。** GitHub からはソースzipを取る事故が多い |
+| 4 | iMovie | Mac にプリインストール | **Clipchamp は Windows 専用**。Mac での予備はこれ。縦動画と字幕が弱い |
+
+Mac が Intel か Apple Silicon かは、アップルメニュー →「このMacについて」のチップ欄で確認（3を入れる場合のみ必要）。
+
+**インストール不要**：AirDrop（書き出した動画を iPhone へ送る、Mac標準）／TikTok・Instagram（スマホ側に App Store から。**音源はアプリ内で付ける**）。
+
+※URLは検索結果に基づく。CapCut は転載記事や偽サイトが多いので、開く前にドメインを確認する。DaVinci Resolve のURLは一般的な公式パスで未検証。
+
 ## 編集はPC、BGMはスマホ
 
 **TikTok / Instagram はアプリ内音源を使うのが前提。** PCで市販音源を乗せると権利の問題や音声ミュートのリスクがあり、アプリ内音源の方が露出にも有利。
