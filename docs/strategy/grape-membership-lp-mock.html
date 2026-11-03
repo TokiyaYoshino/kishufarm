@@ -1,0 +1,206 @@
+<title>ぶどうの木会員権</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 縦に読む一枚もの。霧の白緑の面に、ぶどう色1色。中央に「木が育つ5年」の房数の帯を置く */
+:root{
+  --mist:#EEF1EC;      /* 背景：朝霧 */
+  --paper:#FAFBF8;     /* 浮き面 */
+  --ink:#24211F;       /* 文字 */
+  --sub:#5E6159;       /* 補助文字 */
+  --line:#D6DBD1;      /* 区切り */
+  --grape:#5B2A4E;     /* アクセント：果皮 */
+  --grape-soft:#EADDE5;
+  --leaf:#4F6B3A;      /* 葉 */
+  --warn:#8A5A12;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --mist:#161815;--paper:#1F221E;--ink:#ECEAE4;--sub:#A6AA9F;--line:#33372F;
+  --grape:#D7A3C6;--grape-soft:#3A2534;--leaf:#A9C48E;--warn:#E3B96A;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --mist:#161815;--paper:#1F221E;--ink:#ECEAE4;--sub:#A6AA9F;--line:#33372F;
+  --grape:#D7A3C6;--grape-soft:#3A2534;--leaf:#A9C48E;--warn:#E3B96A;color-scheme:dark}
+
+body{background:var(--mist);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:72px;padding-block:28px 80px}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.4}
+p{margin:0}
+.mock{align-self:flex-start;font-size:12px;letter-spacing:.08em;color:var(--warn);border:1px solid currentColor;border-radius:4px;padding:2px 8px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--leaf);font-weight:700}
+section{display:flex;flex-direction:column;gap:20px}
+h2{font-size:clamp(24px,5vw,30px)}
+.lead{color:var(--sub);max-width:36em}
+
+/* hero */
+.hero{gap:24px}
+.hero h1{font-size:clamp(34px,8vw,56px);font-weight:800;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--grape)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:8px;border-top:1px solid var(--line)}
+.facts div{display:flex;flex-direction:column}
+.facts span{font-size:12px;color:var(--sub);letter-spacing:.06em}
+.facts b{font-family:var(--f-display);font-size:24px;font-variant-numeric:tabular-nums}
+
+/* 房数の帯 */
+.growth{background:var(--paper);border-radius:20px;padding:28px max(20px,4%);display:flex;flex-direction:column;gap:22px}
+.yr{display:grid;grid-template-columns:7.5em 1fr;gap:6px 16px;align-items:center}
+.yr .lbl{font-size:13px;color:var(--sub);line-height:1.4}
+.yr .lbl b{display:block;color:var(--ink);font-size:15px}
+.bar{position:relative;height:30px}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:15px;background:var(--grape-soft)}
+.bar i.min{background:var(--grape)}
+.yr .num{grid-column:2;font-size:14px;color:var(--sub);font-variant-numeric:tabular-nums}
+.yr .num b{font-family:var(--f-display);font-size:20px;color:var(--ink)}
+.mature{border-top:1px dashed var(--line);padding-top:18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.mature b{font-family:var(--f-display);font-size:clamp(30px,7vw,42px);color:var(--grape);font-variant-numeric:tabular-nums}
+.note{font-size:13px;color:var(--sub)}
+
+/* タイムライン */
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps li{display:grid;grid-template-columns:5.5em 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .when{font-family:var(--f-display);font-weight:700;color:var(--grape);line-height:1.5}
+.steps .when small{display:block;font-family:var(--f-body);font-weight:400;color:var(--sub);font-size:12px}
+.steps h3{font-size:18px;margin-bottom:4px}
+
+/* プラン */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:720px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--paper);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.plan.top{outline:2px solid var(--grape)}
+.plan h3{font-size:22px}
+.price{font-family:var(--f-display);font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.price small{font-family:var(--f-body);font-size:13px;font-weight:400;color:var(--sub)}
+.wine{background:var(--grape-soft);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.wine span{font-size:13px}
+.wine b{font-family:var(--f-display);font-size:22px;color:var(--grape);font-variant-numeric:tabular-nums;white-space:nowrap}
+.plan ul{margin:0;padding-left:1.1em;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.seats{font-size:13px;color:var(--sub);margin-top:auto}
+
+/* 注意・FAQ */
+.cautions{background:var(--paper);border-radius:18px;padding:22px 24px}
+.cautions ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:15px}
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style-position:outside}
+summary:focus-visible,.cta:focus-visible{outline:2px solid var(--grape);outline-offset:3px}
+details p{margin-top:8px;color:var(--sub);font-size:15px}
+
+.apply{align-items:flex-start}
+.cta{font:inherit;font-weight:700;background:var(--grape);color:var(--paper);border:0;border-radius:999px;padding:14px 28px;opacity:.55;cursor:not-allowed}
+</style>
+
+<div class="wrap">
+  <span class="mock">公開前モック・数字は仮</span>
+
+  <section class="hero">
+    <p class="eyebrow">霧珠ファーム ぶどうの木会員権 第1期</p>
+    <h1>あなたの名前の木が、<br><em>3年で実をつけ、ワインになる。</em></h1>
+    <p class="lead">霧珠ファームのぶどう畑から、まだ若い木を1本お預けします。剪定、芽吹き、色づき、収穫。木が育つ3年間を一緒に見守り、そのぶどうで醸したワインをお届けします。</p>
+    <div class="facts">
+      <div><span>募集口数</span><b>50口</b></div>
+      <div><span>契約期間</span><b>3年</b></div>
+      <div><span>年会費</span><b>3万・5万・10万円</b></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">1本の木から採れる房数（見込み）</p>
+    <h2>木は、年ごとに実りを増やします</h2>
+    <div class="growth" role="img" aria-label="1本あたりの房数の見込み。契約1年目6〜10房、2年目12〜24房、3年目24〜36房、成木で200〜250房">
+      <!-- 帯の長さは 36房 = 100% で揃える -->
+      <div class="yr">
+        <div class="lbl"><b>契約1年目</b>2027年・樹齢3年</div>
+        <div class="bar"><i style="width:27.8%"></i><i class="min" style="width:16.7%"></i></div>
+        <div class="num"><b>6〜10</b> 房 ／ ワイン約1本分</div>
+      </div>
+      <div class="yr">
+        <div class="lbl"><b>契約2年目</b>2028年・樹齢4年</div>
+        <div class="bar"><i style="width:66.7%"></i><i class="min" style="width:33.3%"></i></div>
+        <div class="num"><b>12〜24</b> 房 ／ ワイン約2〜3本分</div>
+      </div>
+      <div class="yr">
+        <div class="lbl"><b>契約3年目</b>2029年・樹齢5年</div>
+        <div class="bar"><i style="width:100%"></i><i class="min" style="width:66.7%"></i></div>
+        <div class="num"><b>24〜36</b> 房 ／ ワイン約3〜5本分</div>
+      </div>
+      <div class="mature">
+        <span class="note">成木になると1本あたり</span><b>200〜250房</b><span class="note">ワイン約27〜34本分。第1期の会員さまには、成木期の第2期を優先してご案内します。</span>
+      </div>
+      <p class="note">濃い部分が少なめの年、薄い部分が多めの年の見込みです。1房約150g、ワイン1本（750ml）にぶどう約7房で換算しています。天候によって変わります。</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">3年間の流れ</p>
+    <h2>届くもの、参加できること</h2>
+    <ol class="steps">
+      <li><div class="when">契約時</div><div><h3>あなたの木が決まります</h3><p>畑の中の1本に名札を付けます。季節ごとに生育便りと写真をお送りします。</p></div></li>
+      <li><div class="when">1年目<small>2027年9月</small></div><div><h3>はじめての房を、生のまま</h3><p>若い木の最初の実りは、収穫祭で摘み取るか、ご自宅へお送りします。量が少ないため、この年はワインにしません。</p></div></li>
+      <li><div class="when">2年目<small>2028年9月</small></div><div><h3>1回目の仕込み</h3><p>会員の木50本のぶどうをまとめて醸造します。ワインは翌年の春以降にお届けします。</p></div></li>
+      <li><div class="when">3年目<small>2029年9月</small></div><div><h3>2回目の仕込み</h3><p>樹齢5年。房数が増え、お届けできる本数も増える見込みです。</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="eyebrow">プラン</p>
+    <h2>3つのかかわり方</h2>
+    <p class="lead">どのプランでも木は1本です。ワインは会員の木のぶどうをまとめて醸造し、年会費の割合に応じてお分けします。最低保証の本数は必ずお届けし、豊作の年は上乗せします。</p>
+    <div class="plans">
+      <article class="plan">
+        <h3>見守る</h3>
+        <p class="price">30,000円<small> ／年（3年）</small></p>
+        <div class="wine"><span>ワイン 3年で</span><b>3〜5本</b></div>
+        <ul><li>名札付きの木 1本</li><li>1年目の房を生でお届け</li><li>季節の生育便り</li><li>収穫祭へご招待（1名）</li></ul>
+        <p class="seats">30口限定 ／ 最低保証 3本</p>
+      </article>
+      <article class="plan">
+        <h3>育てる</h3>
+        <p class="price">50,000円<small> ／年（3年）</small></p>
+        <div class="wine"><span>ワイン 3年で</span><b>5〜9本</b></div>
+        <ul><li>「見守る」の内容すべて</li><li>収穫体験（2名）</li><li>冬の剪定体験</li></ul>
+        <p class="seats">15口限定 ／ 最低保証 5本</p>
+      </article>
+      <article class="plan top">
+        <h3>醸す</h3>
+        <p class="price">100,000円<small> ／年（3年）</small></p>
+        <div class="wine"><span>ワイン 3年で</span><b>11〜19本</b></div>
+        <ul><li>「育てる」の内容すべて</li><li>お名前入りのラベル</li><li>醸造所の見学</li><li>収穫祭の食事会（2名）</li></ul>
+        <p class="seats">5口限定 ／ 最低保証 10本</p>
+      </article>
+    </div>
+    <p class="note">価格の税込・税抜は確定後に記載します。</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">お申し込みの前に</p>
+    <div class="cautions">
+      <ul>
+        <li>房数・本数は見込みです。天候や病気で少なくなる年があります。最低保証を下回った場合の扱いは規約に定めます。</li>
+        <li>ワインは提携ワイナリーに醸造を委託します。お届けは仕込みの翌年の春以降です。</li>
+        <li>ワインのお届けは20歳以上の方に限ります。</li>
+        <li>木が枯れた場合は、植え替えるか、別の木をお割り当てします。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">よくある質問</p>
+    <div>
+      <details><summary>自分の木のぶどうだけでワインになりますか</summary><p>1本から採れる量はワイン数本分のため、会員の木のぶどうをまとめて醸造します。1年目の房は、ご自身の木のものを生でお届けします。</p></details>
+      <details><summary>畑に行けなくても参加できますか</summary><p>はい。生育便りと写真をお送りし、ぶどうとワインはご自宅へお届けします。</p></details>
+      <details><summary>3年が終わったらどうなりますか</summary><p>成木期に入る第2期を、第1期の会員さまへ先にご案内します。</p></details>
+      <details><summary>途中でやめられますか</summary><p>中途解約の条件は規約に定めます（確定後に記載）。</p></details>
+    </div>
+  </section>
+
+  <section class="apply">
+    <h2>第1期 50口</h2>
+    <p class="lead">受付開始日は決まり次第お知らせします。</p>
+    <button class="cta" id="apply" type="button" disabled>受付開始前</button>
+  </section>
+</div>
